@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3F4B176E-D1E9-4FC9-969A-C3D1A23ABAB1}</ProjectGuid>
+    <ProjectGuid>{72ED83CD-6370-4541-94CC-15A1AEF703AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OdeToFood.Tests</RootNamespace>
@@ -100,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OdeToFood\OdeToFood.csproj">
-      <Project>{A5FF1F65-849D-4B3F-A7E1-BCA1FF88FC75}</Project>
+      <Project>{785CF442-A802-47C5-9482-F66D081A341D}</Project>
       <Name>OdeToFood</Name>
     </ProjectReference>
   </ItemGroup>
