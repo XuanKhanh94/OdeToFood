@@ -12,7 +12,7 @@ namespace OdeToFood.Controllers
         public ActionResult Search(string name="Khanh")
         {
             var message = Server.HtmlEncode(name);
-            return Content(message);
+            return Json(new { Message=message,name="Xuan Khanh"},JsonRequestBehavior.AllowGet);
         }
     }
 }
