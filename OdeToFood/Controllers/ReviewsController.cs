@@ -96,7 +96,7 @@ namespace OdeToFood.Controllers
             {
                 Id=1,
                 Name="Cinnamon Club",
-                City="London",
+                City="<script>alert('sad');</script>",
                 Country="UK",
                 Rating=10,
             },
@@ -115,6 +115,14 @@ namespace OdeToFood.Controllers
                 City="Tokyo",
                 Country="JP",
                 Rating=7,
+            },
+                new RestaurantReview
+            {
+                Id=4,
+                Name="Kin Club",
+                City="HaNoi",
+                Country="VN",
+                Rating=9,
             },
          };
 
