@@ -8,11 +8,17 @@ namespace OdeToFood.Controllers
 {
     public class CuisineController : Controller
     {
-        // GET: Cuisine
+        [HttpPost]
         public ActionResult Search(string name="Khanh")
         {
             var message = Server.HtmlEncode(name);
-            return Json(new { Message=message,name="Xuan Khanh"},JsonRequestBehavior.AllowGet);
+            return Content(message);
+        }
+        [HttpGet]
+        public ActionResult Search()
+        {
+           
+            return Content("Search");
         }
     }
 }
