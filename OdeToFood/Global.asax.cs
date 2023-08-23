@@ -12,6 +12,7 @@ namespace OdeToFood
     {
         protected void Application_Start()
         {
+            WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile","UserId","UserName",autoCreateTables:true);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
