@@ -9,3 +9,4 @@ S33 Summary
 S34 The Scripts
 S40 Summary
 S41 Authentication
+S42 Windows Authentication
