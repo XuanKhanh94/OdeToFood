@@ -6,6 +6,7 @@ namespace OdeToFood.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Web.Security;
 
     internal sealed class Configuration : DbMigrationsConfiguration<OdeToFood.Models.OdeToFoodDb>
     {
@@ -35,7 +36,22 @@ namespace OdeToFood.Migrations
             {
                 context.Restaurants.AddOrUpdate(r => r.Name,
                             new Restaurant { Name = i.ToString(), City = "HCM", Country = "VN" });
-                                   }
+            }
+            SeedMembership();
+        }
+
+        private void SeedMembership()
+        {
+
+            //var roles = (SimpleRoleProvider)Roles.Provider;
+            //var membership = (SimpleMembershipProvider)Membership.Provider;
+
+            //if (!roles.RoleExits("Admin"))
+            //{
+            //    roles.CreateRole("Admin");
+            //}
+
+
         }
     }
 }

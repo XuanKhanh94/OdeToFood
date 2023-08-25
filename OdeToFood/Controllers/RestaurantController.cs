@@ -10,6 +10,7 @@ using OdeToFood.Models;
 
 namespace OdeToFood.Controllers
 {
+
     public class RestaurantController : Controller
     {
         private OdeToFoodDb db = new OdeToFoodDb();
@@ -20,7 +21,7 @@ namespace OdeToFood.Controllers
             return View(db.Restaurants.ToList());
         }
 
-     
+        [Authorize(Roles = "admin@123")]
         // GET: Restaurant/Create
         public ActionResult Create()
         {
@@ -32,6 +33,7 @@ namespace OdeToFood.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin@123")]
         public ActionResult Create([Bind(Include = "Id,Name,City,Country")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
@@ -44,6 +46,7 @@ namespace OdeToFood.Controllers
             return View(restaurant);
         }
 
+        [Authorize(Roles = "admin@123")]
         // GET: Restaurant/Edit/5
         public ActionResult Edit(int? id)
         {

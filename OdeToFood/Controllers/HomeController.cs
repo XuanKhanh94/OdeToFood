@@ -8,7 +8,7 @@ using PagedList;
 
 namespace OdeToFood.Controllers
 {
-    [Authorize (Roles  ="admin@123,abc@123")]
+   
 
     public class HomeController : Controller
     {

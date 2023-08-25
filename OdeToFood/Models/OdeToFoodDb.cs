@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace OdeToFood.Models
 {
-    public class OdeToFoodDb : DbContext
+    public class OdeToFoodDb : IdentityDbContext<ApplicationUser>
     {
         public OdeToFoodDb() : base("name=DefaultConnection")
         {
@@ -15,5 +16,10 @@ namespace OdeToFood.Models
         public DbSet <UserProfile> UserProfiles{ get; set; }
         public DbSet <Restaurant> Restaurants{ get; set; }
         public DbSet <RestaurantReview> Reviews{ get; set; }
+
+        public static OdeToFoodDb Create()
+        {
+            return new OdeToFoodDb();
+        }
     }
 }
